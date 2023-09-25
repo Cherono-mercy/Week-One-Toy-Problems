@@ -14,7 +14,7 @@ function netSalaryCalculator() {
 
   //Calculating the gross salary
   const grossSalary = basicSalary + totalBenefits;
-  document.write(`Gross salary: <b> ${grossSalary}/= </b> <br/>`);
+  document.write(`Gross salary is: <b>${grossSalary}/= </b><br/>`);
 
   //Calculating Payee on various monthly income classes
   if (grossSalary <= 24000) {
@@ -29,7 +29,7 @@ function netSalaryCalculator() {
     PAYE = grossSalary * 0.35;
   }
   //Printing out the inividual's PAYE tax
-  document.write(`PAYE tax: <b> ${PAYE}/= </b> <br/>`);
+  document.write(`PAYE tax is:  <b>${PAYE}/= </b> <br/>`);
 
   //Calculating NHIF deductions for various pay groups using else if statement
   if ((grossSalary <= 5, 999)) {
@@ -67,17 +67,17 @@ function netSalaryCalculator() {
   } else if ((grossSalary > 99, 999)) {
     nhifDeductions = 1700;
   }
-  document.write(`NHIF Deductions: <b> ${nhifDeductions}/= </b> <br/>`);
+  document.write(`NHIF Deduction is:  <b> ${nhifDeductions}/= </b><br/>`);
 
   //Calculating NSSF Deductions and outputing the amount in bold
   nssfDeductions = grossSalary * 0.06;
-  document.write(`NSSF Deductions: <b> ${nssfDeductions}/= </b> <br/>`);
+  document.write(`NSSF Deductions is:  <b> ${nssfDeductions}/= </b><br/>`);
 
   //Calculating total deductions and outputing the amount in bold
   const totalDeductions = PAYE + nhifDeductions + nssfDeductions;
-  document.write(`Total Deductions: <b> ${totalDeductions}/= </b> <br/>`);
+  document.write(`The total Deduction is:  <b> ${totalDeductions}/= </b><br/>`);
 
   //Finally calculating net salary and outputing the amount in bold
   const netSalary = grossSalary - totalDeductions;
-  document.write(`Net salary: <b> ${netSalary}/= </b> </br>`);
+  document.write(`Net Salary is:  <b> ${netSalary}/= </b><br/>`);
 }
